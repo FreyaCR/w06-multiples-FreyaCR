@@ -10,7 +10,11 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
 
         //get result from intent extra
-        val result = intent.getIntExtra("result",0)
+        val factor1 = intent.getIntExtra("factor1",0)
+        val factor2 = intent.getIntExtra("factor2",0)
+
+        //calculate result
+        val result = factor1 * factor2
 
         //populate result
         val resultView = findViewById<TextView>(R.id.result)

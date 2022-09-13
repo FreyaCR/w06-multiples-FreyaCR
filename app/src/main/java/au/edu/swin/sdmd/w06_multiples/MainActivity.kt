@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         //randomly generate two integer factors 1-12
         val factor1 = Random.nextInt(from = 1, until = 13)
         val factor2 = Random.nextInt(from = 1, until = 13)
-        val result = factor1 * factor2
 
         //populate factor text views with generated values
         val factor1View = findViewById<TextView>(R.id.factor1)
@@ -27,7 +26,8 @@ class MainActivity : AppCompatActivity() {
         val layoutView = findViewById<ConstraintLayout>(R.id.layout)
         layoutView.setOnClickListener {
             val intent = Intent(this, ResultActivity::class.java).apply {
-                putExtra("result", result) //int extra
+                putExtra("factor1", factor1) //int extra
+                putExtra("factor2", factor2) //int extra
             }
             startActivity(intent) //start result activity
         }
