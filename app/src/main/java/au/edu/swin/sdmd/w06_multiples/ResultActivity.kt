@@ -9,16 +9,12 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-        //get result from intent extra
-        val factor1 = intent.getIntExtra("factor1",0)
-        val factor2 = intent.getIntExtra("factor2",0)
-
-        //calculate result
-        val result = factor1 * factor2
+        //get parcelable object from intent extra
+        val multiples = intent.getParcelableExtra<Multiples>("multiples")
 
         //populate result
         val resultView = findViewById<TextView>(R.id.result)
-        resultView.text = result.toString()
+        resultView.text = multiples!!.result.toString()
 
     }
 }
