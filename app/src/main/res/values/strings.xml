@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">W06-Multiples</string>
-    <string name="zero">0</string>
+    <string name="hint">number</string>
     <string name="times">times</string>
 </resources>

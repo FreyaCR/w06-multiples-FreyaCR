@@ -20,15 +20,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/factor1"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_factor1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="@string/zero"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="50sp" />
+            android:gravity="center">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/factor1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:hint="@string/hint"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/times"
@@ -36,19 +44,27 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/times"
-            android:textAlignment="center"
             android:gravity="center"
             android:textSize="30sp" />
 
-        <TextView
-            android:id="@+id/factor2"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_factor2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="@string/zero"
             android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="50sp" />
+            android:gravity="center">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/factor2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:hint="@string/hint" />
+
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
